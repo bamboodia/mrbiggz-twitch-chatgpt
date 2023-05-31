@@ -94,9 +94,9 @@ app.get('/gpt/:text', async (req, res) => {
           agent_response = agent_response.substring(0, 399)
           agent_response_more = agent_response.substring(400, 799)
           console.log ("Sliced agent answer: " + agent_response)
-        }
-        res.send(agent_response_more)
+        }        
         res.send(agent_response)
+        res.send(agent_response_more)
       } else {
         res.send("Something went wrong. Try again later!")
       }
